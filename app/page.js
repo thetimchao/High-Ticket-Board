@@ -2,11 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { JOBS, NICHES } from "../data/jobs";
+import { EXTENDED_JOBS } from "../data/jobs-extended";
 
-const ALL_JOBS = JOBS.map((j) => ({
-  ...j,
-  roleTypes: j.roleTypes || [j.roleType],
-}));
+const ALL_JOBS = [
+  ...JOBS.map((j) => ({ ...j, roleTypes: j.roleTypes || [j.roleType] })),
+  ...EXTENDED_JOBS,
+];
 
 const ROLE_TYPES = [
   "DM Setter",

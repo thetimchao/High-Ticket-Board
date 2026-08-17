@@ -70,7 +70,7 @@ export const NICHES = {
     "Automotive B2B",
     "Professional Services",
   ],
-  Other: ["Miscellaneous"],
+  Other: ["Real Estate Sales", "Travel & Hospitality", "Miscellaneous"],
 };
 
 export const JOBS = [
