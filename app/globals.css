@@ -529,6 +529,81 @@ footer .disclaimer {
   margin: 8px auto 0;
 }
 
+footer .footer-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+footer .footer-credit {
+  color: var(--text-dim);
+  font-size: 14px;
+  margin: 4px 0 10px;
+}
+
+footer .footer-link {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+footer .footer-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- YouTube CTA banner ---------- */
+.cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+  background: linear-gradient(
+    135deg,
+    rgba(79, 140, 255, 0.14),
+    rgba(167, 139, 250, 0.1)
+  );
+  border: 1px solid rgba(79, 140, 255, 0.35);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin: 18px 0 6px;
+}
+
+.cta-title {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.cta-sub {
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-top: 4px;
+  max-width: 640px;
+}
+
+.cta-btn {
+  background: #ff0000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14.5px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.cta-btn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 900px) {
   .board {

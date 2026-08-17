@@ -2,20 +2,17 @@
 
 import { useMemo, useState } from "react";
 import { JOBS, NICHES } from "../data/jobs";
-import { NOREPLY_JOBS } from "../data/noreply-jobs";
 
-const ALL_JOBS = [
-  ...JOBS.map((j) => ({ ...j, roleTypes: j.roleTypes || [j.roleType] })),
-  ...NOREPLY_JOBS,
-];
+const ALL_JOBS = JOBS.map((j) => ({
+  ...j,
+  roleTypes: j.roleTypes || [j.roleType],
+}));
 
 const ROLE_TYPES = [
   "DM Setter",
   "Phone Setter",
   "Closer",
   "Setter → Closer",
-  "Full-Cycle Rep",
-  "CSM",
   "Sales Manager",
 ];
 
@@ -47,7 +44,7 @@ export default function Home() {
   const [flows, setFlows] = useState([]);
   const [remoteOnly, setRemoteOnly] = useState(false);
   const [minOte, setMinOte] = useState(0);
-  const [sort, setSort] = useState("newest");
+  const [sort, setSort] = useState("ote-desc");
   const [expanded, setExpanded] = useState(null);
   const [openNiches, setOpenNiches] = useState([]);
   const [visible, setVisible] = useState(50);
@@ -132,9 +129,11 @@ export default function Home() {
           </div>
           <a
             className="topbar-cta"
-            href="mailto:reachtimchao@gmail.com?subject=Post%20a%20job%20on%20HighTicket%20Board"
+            href="https://www.youtube.com/@Hak1msaif"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Post a Job
+            ▶ Learn High-Ticket Sales
           </a>
         </div>
       </header>
@@ -147,9 +146,9 @@ export default function Home() {
           The job board for <em>setters &amp; closers</em> in high-ticket sales
         </h1>
         <p>
-          DM setting, phone setting, closing, full-cycle and CSM seats across
-          coaching, info products, agencies, finance and more — with on-target
-          earnings, offer revenue, and niche for every listing.
+          DM setting, phone setting, and closing seats across coaching, info
+          products, agencies, finance and more — with on-target earnings,
+          commission structures, and lead flow for every offer.
         </p>
 
         <div className="stats">
@@ -175,27 +174,47 @@ export default function Home() {
           <h3>📊 What the market is paying right now</h3>
           <div className="insights-grid">
             <div>
-              <b>DM setters</b>
-              $2K–$7K/mo posted OTE typical; top DM seats on big personal
-              development and trading offers post $10K–$12K/mo.
+              <b>Setters</b>
+              $40K–$70K OTE typical. Base + commission seats (e.g. $55K–$65K
+              base) are back in warm-lead operations.
             </div>
             <div>
-              <b>Phone setters</b>
-              $3K–$10K/mo typical. Fractional-CFO, finance and biz-coaching
-              offers post the highest setter OTEs ($13K–$30K/mo).
+              <b>Entry closers</b>
+              $55K–$80K OTE. Insurance and home services are the most common
+              W-2 on-ramps.
             </div>
             <div>
-              <b>Closers</b>
-              $8K–$20K/mo is the fat middle. 10–20% commission on $5K–$15K
-              offers, mostly commission-only.
+              <b>Experienced closers</b>
+              $110K–$160K OTE at 10–20% commission on $5K–$15K offers, mostly
+              commission-only.
             </div>
             <div>
               <b>Top seats</b>
-              $40K–$100K/mo posted ceilings: Medicare/insurance, biz
-              acquisition, trading education, and holistic health at
-              $1M+/mo revenue.
+              $200K–$500K posted ceilings in personal development, alt
+              investments, and home exteriors.
             </div>
           </div>
+        </div>
+
+        <div className="cta-banner">
+          <div>
+            <div className="cta-title">
+              New to high-ticket sales — or trying to level up?
+            </div>
+            <div className="cta-sub">
+              Hakim Saif breaks down high-ticket sales training &amp;
+              placement on YouTube: how to land a seat, run calls, and scale
+              your income.
+            </div>
+          </div>
+          <a
+            className="cta-btn"
+            href="https://www.youtube.com/@Hak1msaif"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ▶ Watch on YouTube
+          </a>
         </div>
       </section>
 
@@ -477,8 +496,20 @@ export default function Home() {
 
       <footer>
         <div className="container">
+          <div className="footer-title">Closing Saif Board</div>
+          <div className="footer-credit">
+            Presented by{" "}
+            <a
+              href="https://www.youtube.com/@Hak1msaif"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Hakim Saif
+            </a>
+          </div>
           <div>
-            HighTicketBoard — built for setters, closers &amp; sales reps.
+            Built for setters, closers &amp; sales reps.
           </div>
           <div className="disclaimer">
             Compensation figures are as posted by hiring companies on public
